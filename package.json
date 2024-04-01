@@ -45,7 +45,7 @@
     "build:generate": "ts-node ./generate/index.ts",
     "build:extension": "ray build -e dist",
     "dev": "run-s dev:generate dev:run",
-    "dev:generate": "ts-node ./generate.ts",
+    "dev:generate": "ts-node ./generate/index.ts",
     "dev:run": "run-p dev:run:*",
     "dev:run:generate": "nodemon --watch generate.ts --exec npm run build:generate",
     "dev:run:extension": "ray develop",

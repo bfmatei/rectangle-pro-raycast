@@ -1,0 +1,103 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "rectangle-pro",
+  "title": "Rectangle Pro",
+  "description": "Control windows using Rectangle Pro",
+  "icon": "appIcon.png",
+  "author": "bfmatei",
+  "categories": [
+    "Applications"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/bfmatei/rectangle-pro-raycast.git"
+  },
+  "preferences": [
+    {
+      "type": "textfield",
+      "name": "openPath",
+      "title": "open Path",
+      "description": "The path to the open binary",
+      "default": "/usr/bin/open",
+      "required": false
+    }
+  ],
+  "commands": [
+    {
+      "name": "placeholderName1",
+      "title": "Placeholder Title 1",
+      "subtitle": "Rectangle Pro",
+      "description": "Placeholder Description 1",
+      "icon": "appIcon.png",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "type": "text",
+          "name": "placeholderArgument1",
+          "placeholder": "Placeholder Argument 1",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "placeholderName2",
+      "title": "Placeholder Title 2",
+      "subtitle": "Rectangle Pro",
+      "description": "Placeholder Description 2",
+      "icon": "appIcon.png",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "type": "dropdown",
+          "data": [
+            {
+              "title": "Placeholder Option for Placeholder Argument 2",
+              "value": "placeholderOptionPlaceholderArgument2"
+            }
+          ],
+          "name": "placeholderArgument2",
+          "placeholder": "Placeholder Argument 2",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "placeholderName3",
+      "title": "Placeholder Title 3",
+      "subtitle": "Rectangle Pro",
+      "description": "Placeholder Description 3",
+      "icon": "appIcon.png",
+      "mode": "no-view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.70.3"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.8",
+    "@types/lodash": "^4.17.0",
+    "@types/node": "20.12.2",
+    "@types/react": "18.2.73",
+    "eslint": "^8.57.0",
+    "lodash": "^4.17.21",
+    "nodemon": "^3.1.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  },
+  "scripts": {
+    "build": "run-s build:*",
+    "build:generate": "ts-node ./generate/index.ts",
+    "build:extension": "ray build -e dist",
+    "dev": "run-s dev:generate dev:run",
+    "dev:generate": "ts-node ./generate.ts",
+    "dev:run": "run-p dev:run:*",
+    "dev:run:generate": "nodemon --watch generate.ts --exec npm run build:generate",
+    "dev:run:extension": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}

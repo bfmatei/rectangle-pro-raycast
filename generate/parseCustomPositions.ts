@@ -45,7 +45,7 @@ export function parseCustomPositions(customPositions: CustomPositions): ScriptOp
           type: customPositions.generic.mode === "dropdown" ? "dropdown" : "text",
           data:
             customPositions.generic.mode === "dropdown"
-              ? dropdown.map(({ title, name }) => ({ title, value: name }))
+              ? dropdown.map(({ title }) => ({ title, value: title }))
               : undefined,
           name: argumentName,
           placeholder: "Position name",

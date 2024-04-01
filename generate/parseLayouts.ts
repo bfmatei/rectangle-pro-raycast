@@ -44,9 +44,7 @@ export function parseLayouts(layouts: Layouts): ScriptOptions {
         {
           type: layouts.generic.mode === "dropdown" ? "dropdown" : "text",
           data:
-            layouts.generic.mode === "dropdown"
-              ? dropdown.map(({ title, name }) => ({ title, value: name }))
-              : undefined,
+            layouts.generic.mode === "dropdown" ? dropdown.map(({ title }) => ({ title, value: title })) : undefined,
           name: argumentName,
           placeholder: "Layout name",
           required: true,

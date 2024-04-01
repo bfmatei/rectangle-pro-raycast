@@ -23,54 +23,7 @@
       "required": false
     }
   ],
-  "commands": [
-    {
-      "name": "placeholderName1",
-      "title": "Placeholder Title 1",
-      "subtitle": "Rectangle Pro",
-      "description": "Placeholder Description 1",
-      "icon": "appIcon.png",
-      "mode": "no-view",
-      "arguments": [
-        {
-          "type": "text",
-          "name": "placeholderArgument1",
-          "placeholder": "Placeholder Argument 1",
-          "required": true
-        }
-      ]
-    },
-    {
-      "name": "placeholderName2",
-      "title": "Placeholder Title 2",
-      "subtitle": "Rectangle Pro",
-      "description": "Placeholder Description 2",
-      "icon": "appIcon.png",
-      "mode": "no-view",
-      "arguments": [
-        {
-          "type": "dropdown",
-          "data": [
-            {
-              "title": "Placeholder Option for Placeholder Argument 2",
-              "value": "placeholderOptionPlaceholderArgument2"
-            }
-          ],
-          "name": "placeholderArgument2",
-          "placeholder": "Placeholder Argument 2",
-          "required": true
-        }
-      ]
-    },
-    {
-      "name": "placeholderName3",
-      "title": "Placeholder Title 3",
-      "subtitle": "Rectangle Pro",
-      "description": "Placeholder Description 3",
-      "icon": "appIcon.png",
-      "mode": "no-view"
-    }
-  ],
+  "commands": [],
   "dependencies": {
     "@raycast/api": "^1.70.3"
   },

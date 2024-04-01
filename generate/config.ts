@@ -5,25 +5,26 @@ export const config: Config = {
     descriptionTemplate: "Resize focused window to the {titleLowerCase} of the screen.",
     generic: {
       description: "Move focused window to custom position",
-      mode: "input",
+      mode: "dropdown",
       title: "Move to Custom Position",
     },
-    items: [],
+    items: [{ title: "Top Center Quarter" }, { title: "Bottom Center Quarter" }],
   },
   layouts: {
     descriptionTemplate: "Activate the {titleLowerCase} layout.",
     generic: {
       description: "Activate layout",
-      mode: "input",
+      mode: "dropdown",
       title: "Activate Layout",
     },
-    items: [],
+    items: [{ title: "4K", name: "layout4k" }, { title: "Laptop" }],
   },
   actions: {
     descriptionTemplate: `Resize focused window to the {titleLowerCase} of the screen.`,
     items: [
       {
         category: "Fill",
+        skip: true,
         descriptionTemplate: "Resize focused window to fill the empty {direction} space of the screen.",
         items: [
           {
@@ -76,12 +77,14 @@ export const config: Config = {
           },
           {
             title: "Almost Maximize",
+            skip: true,
             descriptionComponents: {
               direction: "",
             },
           },
           {
             title: "Maximize Height",
+            skip: true,
             descriptionComponents: {
               direction: "height of ",
             },
@@ -103,6 +106,7 @@ export const config: Config = {
           },
           {
             title: "Center Half",
+            skip: true,
           },
           {
             title: "Top Half",
@@ -137,6 +141,7 @@ export const config: Config = {
           },
           {
             title: "Center Third",
+            skip: true,
           },
           {
             title: "Last Third",
@@ -146,6 +151,7 @@ export const config: Config = {
           },
           {
             title: "Center Two Thirds",
+            skip: true,
           },
           {
             title: "Last Two Thirds",
@@ -154,6 +160,7 @@ export const config: Config = {
       },
       {
         category: "Corner Two Thirds",
+        skip: true,
         items: [
           {
             title: "Top Left Two Thirds",
@@ -175,6 +182,7 @@ export const config: Config = {
       },
       {
         category: "Fourths",
+        skip: true,
         items: [
           {
             title: "First Fourth",
@@ -198,6 +206,7 @@ export const config: Config = {
       },
       {
         category: "Sixths",
+        skip: true,
         items: [
           {
             title: "Top Left Sixth",
@@ -233,9 +242,11 @@ export const config: Config = {
           },
           {
             title: "Top Center Left Eighth",
+            skip: true,
           },
           {
             title: "Top Center Right Eighth",
+            skip: true,
           },
           {
             title: "Top Right Eighth",
@@ -245,9 +256,11 @@ export const config: Config = {
           },
           {
             title: "Bottom Center Left Eighth",
+            skip: true,
           },
           {
             title: "Bottom Center Right Eighth",
+            skip: true,
           },
           {
             title: "Bottom Right Eighth",
@@ -256,6 +269,7 @@ export const config: Config = {
       },
       {
         category: "Ninths",
+        skip: true,
         items: [
           {
             title: "Top Left Ninth",
@@ -292,6 +306,7 @@ export const config: Config = {
         items: [
           {
             title: "Next Display",
+            skip: true,
             descriptionComponents: {
               direction: "next",
               type: "display",
@@ -299,6 +314,7 @@ export const config: Config = {
           },
           {
             title: "Previous Display",
+            skip: true,
             descriptionComponents: {
               direction: "previous",
               type: "display",
@@ -397,6 +413,7 @@ export const config: Config = {
       },
       {
         category: "Nudge",
+        skip: true,
         descriptionTemplate: "Move focused window {direction}.",
         items: [
           {
@@ -427,6 +444,7 @@ export const config: Config = {
       },
       {
         category: "Size",
+        skip: true,
         descriptionTemplate: "Resize focused window to be {size}.",
         items: [
           {
@@ -451,6 +469,7 @@ export const config: Config = {
           },
           {
             title: "Upper Center",
+            skip: true,
           },
           {
             title: "Restore",
@@ -464,6 +483,7 @@ export const config: Config = {
       },
       {
         category: "Multiple Windows",
+        skip: true,
         items: [
           {
             title: "Reveal Desktop Edge",
@@ -517,6 +537,7 @@ export const config: Config = {
       },
       {
         category: "Control",
+        skip: true,
         items: [
           {
             title: "Close",
@@ -538,6 +559,7 @@ export const config: Config = {
       },
       {
         category: "Stash",
+        skip: true,
         descriptionTemplate: "Stash focused window to the {direction} of the screen.",
         items: [
           {
@@ -596,6 +618,7 @@ export const config: Config = {
       },
       {
         category: "Pin",
+        skip: true,
         items: [
           {
             title: "Pin",

@@ -1,4 +1,4 @@
-import { camelCase, kebabCase } from "lodash";
+import { camelCase } from "lodash";
 
 import { Command, CustomPosition, CustomPositions, File, ParserResult } from "./types";
 
@@ -7,7 +7,7 @@ export function parseCustomPosition(
   { name, title, parameter, description, descriptionComponents }: CustomPosition,
 ): ParserResult {
   name = name ?? camelCase(title);
-  parameter = parameter ?? kebabCase(title);
+  parameter = parameter ?? title;
 
   if (!description) {
     description = Object.entries({

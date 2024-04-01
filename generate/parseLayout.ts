@@ -1,4 +1,4 @@
-import { camelCase, kebabCase } from "lodash";
+import { camelCase } from "lodash";
 
 import { Command, File, Layout, Layouts, ParserResult } from "./types";
 
@@ -7,7 +7,7 @@ export function parseLayout(
   { name, title, parameter, description, descriptionComponents }: Layout,
 ): ParserResult {
   name = name ?? camelCase(title);
-  parameter = parameter ?? kebabCase(title);
+  parameter = parameter ?? title;
 
   if (!description) {
     description = Object.entries({

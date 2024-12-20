@@ -5,19 +5,17 @@ import { Action, ActionCategory, Actions, Command, File, ParserResult } from "./
 export function parseAction(
   { descriptionTemplate: actionsDescriptionTemplate }: Actions,
   { descriptionTemplate: categoryDescriptionTemplate }: ActionCategory,
-  { name, title, parameter, description, descriptionComponents }: Action,
+  { name, title, parameter, description, descriptionComponents, icon }: Action, // Added `icon`
 ): ParserResult {
   name = name ?? camelCase(title);
   parameter = parameter ?? kebabCase(title);
 
   if (!description) {
-    const descriptionTemplate = categoryDescriptionTemplate ?? actionsDescriptionTemplate;
-
     description = Object.entries({
       title,
       titleLowerCase: title.toLowerCase(),
       ...descriptionComponents,
-    }).reduce((acc, [key, value]) => acc.replaceAll(`{${key}}`, value), descriptionTemplate);
+    }).reduce((acc, [key, value]) => acc.replaceAll(`{${key}}`, value), categoryDescriptionTemplate ?? actionsDescriptionTemplate);
   }
 
   const command: Command = {
@@ -25,9 +23,9 @@ export function parseAction(
     title,
     subtitle: "Rectangle Pro",
     description,
-    icon: "appIcon.png",
+    icon: icon || "appIcon.png", // Use provided icon or default
     mode: "no-view",
-    parameter,
+    parameter: parameter || null,
   };
 
   const file: File = {

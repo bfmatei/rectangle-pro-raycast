@@ -37,7 +37,7 @@ export function parseCustomPositions(customPositions: CustomPositions): ScriptOp
       title: customPositions.generic.title,
       subtitle: "Rectangle Pro",
       description: customPositions.generic.description,
-      icon: "appIcon.png",
+      icon: customPositions.generic.icon || "appIcon.png", // Use `icon` from generic if available
       mode: "no-view",
       parameter: null,
       arguments: [

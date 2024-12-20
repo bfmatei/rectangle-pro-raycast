@@ -4,7 +4,7 @@ import { Command, CustomPosition, CustomPositions, File, ParserResult } from "./
 
 export function parseCustomPosition(
   { descriptionTemplate: customPositionsDescriptionTemplate }: CustomPositions,
-  { name, title, parameter, description, descriptionComponents }: CustomPosition,
+  { name, title, parameter, description, descriptionComponents, icon }: CustomPosition,
 ): ParserResult {
   name = name ?? camelCase(title);
   parameter = parameter ?? title;
@@ -22,9 +22,9 @@ export function parseCustomPosition(
     title,
     subtitle: "Rectangle Pro",
     description,
-    icon: "appIcon.png",
+    icon: icon || "appIcon.png", // Use provided icon or default
     mode: "no-view",
-    parameter,
+    parameter: parameter || null,
   };
 
   const file: File = {

@@ -37,14 +37,16 @@ export function parseLayouts(layouts: Layouts): ScriptOptions {
       title: layouts.generic.title,
       subtitle: "Rectangle Pro",
       description: layouts.generic.description,
-      icon: "appIcon.png",
+      icon: layouts.generic.icon || "appIcon.png", // Use `icon` from generic if available
       mode: "no-view",
       parameter: null,
       arguments: [
         {
           type: layouts.generic.mode === "dropdown" ? "dropdown" : "text",
           data:
-            layouts.generic.mode === "dropdown" ? dropdown.map(({ title }) => ({ title, value: title })) : undefined,
+            layouts.generic.mode === "dropdown"
+              ? dropdown.map(({ title }) => ({ title, value: title }))
+              : undefined,
           name: argumentName,
           placeholder: "Layout name",
           required: true,

@@ -4,7 +4,7 @@ import { Command, File, Layout, Layouts, ParserResult } from "./types";
 
 export function parseLayout(
   { descriptionTemplate: layoutsDescriptionTemplate }: Layouts,
-  { name, title, parameter, description, descriptionComponents }: Layout,
+  { name, title, parameter, description, descriptionComponents, icon }: Layout,
 ): ParserResult {
   name = name ?? camelCase(title);
   parameter = parameter ?? title;
@@ -22,9 +22,9 @@ export function parseLayout(
     title,
     subtitle: "Rectangle Pro",
     description,
-    icon: "appIcon.png",
+    icon: icon || "appIcon.png", // Use provided icon or default
     mode: "no-view",
-    parameter,
+    parameter: parameter || null,
   };
 
   const file: File = {

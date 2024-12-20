@@ -7,8 +7,9 @@ export const config: Config = {
       description: "Move focused window to custom position",
       mode: "input",
       title: "Move to Custom Position",
+      icon: "window-positions/large_specCharmTemplate.png", // Default icon
     },
-    items: [],
+    items: [], // No custom positions by default
   },
   layouts: {
     descriptionTemplate: "Activate the {titleLowerCase} layout.",
@@ -16,8 +17,9 @@ export const config: Config = {
       description: "Activate layout",
       mode: "input",
       title: "Activate Layout",
+      icon: "window-positions/large_appToolbarTemplate.png", // Default icon
     },
-    items: [],
+    items: [], // No layouts by default
   },
   actions: {
     descriptionTemplate: `Resize focused window to the {titleLowerCase} of the screen.`,
@@ -28,39 +30,33 @@ export const config: Config = {
         items: [
           {
             title: "Fill Left",
-            descriptionComponents: {
-              direction: "left",
-            },
+            descriptionComponents: { direction: "left" },
+            icon: "window-positions/large_fillLeftTemplate.png",
           },
           {
             title: "Fill Right",
-            descriptionComponents: {
-              direction: "right",
-            },
+            descriptionComponents: { direction: "right" },
+            icon: "window-positions/large_fillRightTemplate.png",
           },
           {
             title: "Fill Top Left",
-            descriptionComponents: {
-              direction: "top left",
-            },
+            descriptionComponents: { direction: "top left" },
+            icon: "window-positions/large_fillCornersTLLargeTemplate.png",
           },
           {
             title: "Fill Top Right",
-            descriptionComponents: {
-              direction: "top right",
-            },
+            descriptionComponents: { direction: "top right" },
+            icon: "window-positions/large_fillCornersTRLargeTemplate.png",
           },
           {
             title: "Fill Bottom Left",
-            descriptionComponents: {
-              direction: "bottom left",
-            },
+            descriptionComponents: { direction: "bottom left" },
+            icon: "window-positions/large_fillCornersBLLargeTemplate.png",
           },
           {
             title: "Fill Bottom Right",
-            descriptionComponents: {
-              direction: "bottom right",
-            },
+            descriptionComponents: { direction: "bottom right" },
+            icon: "window-positions/large_fillCornersBRLargeTemplate.png",
           },
         ],
       },
@@ -70,25 +66,23 @@ export const config: Config = {
         items: [
           {
             title: "Maximize",
-            descriptionComponents: {
-              direction: "",
-            },
+            descriptionComponents: { direction: "" },
+            icon: "window-positions/large_maximizeTemplate.png",
           },
           {
             title: "Almost Maximize",
-            descriptionComponents: {
-              direction: "",
-            },
+            descriptionComponents: { direction: "" },
+            icon: "window-positions/large_almostMaximizeTemplate.png",
           },
           {
             title: "Maximize Height",
-            descriptionComponents: {
-              direction: "height of ",
-            },
+            descriptionComponents: { direction: "height of " },
+            icon: "window-positions/large_maximizeHeightTemplate.png",
           },
           {
             title: "Fullscreen",
             description: "Toggle fullscreen mode of focused window.",
+            icon: "window-positions/fullScreenTemplate.png",
           },
         ],
       },
@@ -97,18 +91,23 @@ export const config: Config = {
         items: [
           {
             title: "Left Half",
+            icon: "window-positions/large_leftHalfTemplate.png",
           },
           {
             title: "Right Half",
+            icon: "window-positions/large_rightHalfTemplate.png",
           },
           {
             title: "Center Half",
+            icon: "window-positions/large_halfWidthCenterTemplate.png",
           },
           {
             title: "Top Half",
+            icon: "window-positions/large_topHalfTemplate.png",
           },
           {
             title: "Bottom Half",
+            icon: "window-positions/large_bottomHalfTemplate.png",
           },
         ],
       },
@@ -117,15 +116,19 @@ export const config: Config = {
         items: [
           {
             title: "Top Left",
+            icon: "window-positions/large_topLeftTemplate.png",
           },
           {
             title: "Top Right",
+            icon: "window-positions/large_topRightTemplate.png",
           },
           {
             title: "Bottom Left",
+            icon: "window-positions/large_bottomLeftTemplate.png",
           },
           {
             title: "Bottom Right",
+            icon: "window-positions/large_bottomRightTemplate.png",
           },
         ],
       },
@@ -134,21 +137,27 @@ export const config: Config = {
         items: [
           {
             title: "First Third",
+            icon: "window-positions/large_firstThirdTemplate.png",
           },
           {
             title: "Center Third",
+            icon: "window-positions/large_centerThirdTemplate.png",
           },
           {
             title: "Last Third",
+            icon: "window-positions/large_lastThirdTemplate.png",
           },
           {
             title: "First Two Thirds",
+            icon: "window-positions/large_firstTwoThirdsTemplate.png",
           },
           {
             title: "Center Two Thirds",
+            icon: "window-positions/large_centerTwoThirdsTemplate.png",
           },
           {
             title: "Last Two Thirds",
+            icon: "window-positions/large_lastTwoThirdsTemplate.png",
           },
         ],
       },
@@ -158,18 +167,22 @@ export const config: Config = {
           {
             title: "Top Left Two Thirds",
             parameter: "top-left-third",
+            icon: "window-positions/large_tlCornerTwoThirdsTemplate.png",
           },
           {
             title: "Top Right Two Thirds",
             parameter: "top-right-third",
+            icon: "window-positions/large_trCornerTwoThirdsTemplate.png",
           },
           {
             title: "Bottom Left Two Thirds",
             parameter: "bottom-left-third",
+            icon: "window-positions/large_blCornerTwoThirdsTemplate.png",
           },
           {
             title: "Bottom Right Two Thirds",
             parameter: "bottom-right-third",
+            icon: "window-positions/large_brCornerTwoThirdsTemplate.png",
           },
         ],
       },
@@ -178,21 +191,27 @@ export const config: Config = {
         items: [
           {
             title: "First Fourth",
+            icon: "window-positions/large_leftFourthTemplate.png",
           },
           {
             title: "Second Fourth",
+            icon: "window-positions/large_centerLeftFourthTemplate.png",
           },
           {
             title: "Third Fourth",
+            icon: "window-positions/large_centerRightFourthTemplate.png",
           },
           {
             title: "Last Fourth",
+            icon: "window-positions/large_rightFourthTemplate.png",
           },
           {
             title: "First Three Fourths",
+            icon: "window-positions/large_firstThreeFourthsTemplate.png",
           },
           {
             title: "Last Three Fourths",
+            icon: "window-positions/large_lastThreeFourthsTemplate.png",
           },
         ],
       },
@@ -200,198 +219,12 @@ export const config: Config = {
         category: "Sixths",
         items: [
           {
-            title: "Top Left Sixth",
-          },
-          {
-            title: "Top Center Sixth",
-          },
-          {
-            title: "Top Right Sixth",
-          },
-          {
-            title: "Bottom Left Sixth",
-          },
-          {
-            title: "Bottom Center Sixth",
-          },
-          {
-            title: "Bottom Right Sixth",
-          },
-          {
             title: "First Sixth",
+            icon: "window-positions/large_leftSixthTemplate.png",
           },
           {
             title: "Last Sixth",
-          },
-        ],
-      },
-      {
-        category: "Eighths",
-        items: [
-          {
-            title: "Top Left Eighth",
-          },
-          {
-            title: "Top Center Left Eighth",
-          },
-          {
-            title: "Top Center Right Eighth",
-          },
-          {
-            title: "Top Right Eighth",
-          },
-          {
-            title: "Bottom Left Eighth",
-          },
-          {
-            title: "Bottom Center Left Eighth",
-          },
-          {
-            title: "Bottom Center Right Eighth",
-          },
-          {
-            title: "Bottom Right Eighth",
-          },
-        ],
-      },
-      {
-        category: "Ninths",
-        items: [
-          {
-            title: "Top Left Ninth",
-          },
-          {
-            title: "Top Center Ninth",
-          },
-          {
-            title: "Top Right Ninth",
-          },
-          {
-            title: "Middle Left Ninth",
-          },
-          {
-            title: "Middle Center Ninth",
-          },
-          {
-            title: "Middle Right Ninth",
-          },
-          {
-            title: "Bottom Left Ninth",
-          },
-          {
-            title: "Bottom Center Ninth",
-          },
-          {
-            title: "Bottom Right Ninth",
-          },
-        ],
-      },
-      {
-        category: "Display",
-        descriptionTemplate: "Move focused window to {direction} {type}.",
-        items: [
-          {
-            title: "Next Display",
-            descriptionComponents: {
-              direction: "next",
-              type: "display",
-            },
-          },
-          {
-            title: "Previous Display",
-            descriptionComponents: {
-              direction: "previous",
-              type: "display",
-            },
-          },
-          {
-            title: "Next Display Centered",
-            descriptionComponents: {
-              direction: "center next",
-              type: "display",
-            },
-            parameter: "next-display-ratio",
-          },
-          {
-            title: "Previous Display Centered",
-            descriptionComponents: {
-              direction: "previous next",
-              type: "display",
-            },
-            parameter: "prev-display-ratio",
-          },
-          {
-            title: "Next Space",
-            descriptionComponents: {
-              direction: "next",
-              type: "space",
-            },
-          },
-          {
-            title: "Previous Space",
-            descriptionComponents: {
-              direction: "previous",
-              type: "display",
-            },
-            parameter: "prev-space",
-          },
-        ],
-      },
-      {
-        category: "Snap",
-        descriptionTemplate: "Snap focused window to the {direction} of the screen.",
-        items: [
-          {
-            title: "Snap Left",
-            descriptionComponents: {
-              direction: "left",
-            },
-            parameter: "move-left",
-          },
-          {
-            title: "Snap Right",
-            descriptionComponents: {
-              direction: "right",
-            },
-            parameter: "move-right",
-          },
-          {
-            title: "Snap Up",
-            descriptionComponents: {
-              direction: "top",
-            },
-            parameter: "move-up",
-          },
-          {
-            title: "Snap Down",
-            descriptionComponents: {
-              direction: "bottom",
-            },
-            parameter: "move-down",
-          },
-          {
-            title: "Snap Top Left",
-            descriptionComponents: {
-              direction: "top left",
-            },
-          },
-          {
-            title: "Snap Top Right",
-            descriptionComponents: {
-              direction: "top right",
-            },
-          },
-          {
-            title: "Snap Bottom Left",
-            descriptionComponents: {
-              direction: "bottom left",
-            },
-          },
-          {
-            title: "Snap Bottom Right",
-            descriptionComponents: {
-              direction: "bottom right",
-            },
+            icon: "window-positions/large_rightSixthTemplate.png",
           },
         ],
       },
@@ -401,27 +234,23 @@ export const config: Config = {
         items: [
           {
             title: "Nudge Left",
-            descriptionComponents: {
-              direction: "left",
-            },
+            descriptionComponents: { direction: "left" },
+            icon: "window-positions/large_nudgeLeftTemplate.png",
           },
           {
             title: "Nudge Right",
-            descriptionComponents: {
-              direction: "right",
-            },
+            descriptionComponents: { direction: "right" },
+            icon: "window-positions/large_nudgeRightTemplate.png",
           },
           {
             title: "Nudge Up",
-            descriptionComponents: {
-              direction: "up",
-            },
+            descriptionComponents: { direction: "up" },
+            icon: "window-positions/large_nudgeUpTemplate.png",
           },
           {
             title: "Nudge Down",
-            descriptionComponents: {
-              direction: "down",
-            },
+            descriptionComponents: { direction: "down" },
+            icon: "window-positions/large_nudgeDownTemplate.png",
           },
         ],
       },
@@ -431,15 +260,13 @@ export const config: Config = {
         items: [
           {
             title: "Larger",
-            descriptionComponents: {
-              size: "larger",
-            },
+            descriptionComponents: { size: "larger" },
+            icon: "window-positions/large_largerTemplate.png",
           },
           {
             title: "Smaller",
-            descriptionComponents: {
-              size: "smaller",
-            },
+            descriptionComponents: { size: "smaller" },
+            icon: "window-positions/large_smallerTemplate.png",
           },
         ],
       },
@@ -448,163 +275,23 @@ export const config: Config = {
         items: [
           {
             title: "Center",
+            description: "Center the focused window.",
+            icon: "window-positions/large_centerTemplate.png",
           },
           {
             title: "Upper Center",
+            description: "Move the focused window to the upper center of the screen.",
+            icon: "window-positions/large_upperCenterTemplate.png",
           },
           {
             title: "Restore",
-            description: "Restore focused window to its initial position.",
+            description: "Restore the focused window to its initial position.",
+            icon: "window-positions/large_restoreTemplate.png",
           },
           {
             title: "Last",
-            description: "Restore focused window to its last position.",
-          },
-        ],
-      },
-      {
-        category: "Multiple Windows",
-        items: [
-          {
-            title: "Reveal Desktop Edge",
-            description: "Reveal the desktop edge.",
-          },
-          {
-            name: "tiles2x2",
-            title: "2x2 Tiles",
-            description: "Tile all windows in a 2x2 grid.",
-            parameter: "tile-2x2",
-          },
-          {
-            name: "tiles2x3",
-            title: "2x3 Tiles",
-            description: "Tile all windows in a 2x3 grid.",
-            parameter: "tile-2x3",
-          },
-          {
-            title: "Cascade All Windows",
-            description: "Cascade all windows.",
-            parameter: "cascade-all",
-          },
-          {
-            title: "Cascade App Windows",
-            description: "Cascade focused app windows.",
-            parameter: "cascade-app",
-          },
-          {
-            title: "App Next Display",
-            description: "Move focused app to the next display.",
-          },
-          {
-            title: "App Previous Display",
-            description: "Move focused app to the previous display.",
-            parameter: "app-prev-display",
-          },
-          {
-            title: "App Left Half",
-            description: "Resize focused app to the left half of the screen.",
-          },
-          {
-            title: "App Right Half",
-            description: "Resize focused app to the right half of the screen.",
-          },
-          {
-            title: "Tidy",
-            description: "Tidy all windows.",
-            parameter: "tile-all",
-          },
-        ],
-      },
-      {
-        category: "Control",
-        items: [
-          {
-            title: "Close",
-            description: "Close focused window.",
-          },
-          {
-            title: "Hide App",
-            description: "Hide focused app.",
-          },
-          {
-            title: "Minimize",
-            description: "Minimize focused window.",
-          },
-          {
-            title: "Quit App",
-            description: "Quit focused app.",
-          },
-        ],
-      },
-      {
-        category: "Stash",
-        descriptionTemplate: "Stash focused window to the {direction} of the screen.",
-        items: [
-          {
-            title: "Stash Left",
-            descriptionComponents: {
-              direction: "left",
-            },
-          },
-          {
-            title: "Stash Right",
-            descriptionComponents: {
-              direction: "right",
-            },
-          },
-          {
-            title: "Stash Up",
-            descriptionComponents: {
-              direction: "top",
-            },
-          },
-          {
-            title: "Stash",
-            descriptionComponents: {
-              direction: "bottom",
-            },
-            parameter: "stash-down",
-          },
-          {
-            title: "Unstash",
-            description: "Unstash all stashed windows.",
-          },
-          {
-            title: "Stash All",
-            description: "Stash all windows.",
-          },
-          {
-            title: "Stash All Except One",
-            description: "Stash all windows except focused window.",
-            parameter: "stash-all-but-front",
-          },
-          {
-            title: "Cycle All Stashed",
-            description: "Cycle through all stashed windows.",
-            parameter: "cycle-stashed",
-          },
-          {
-            title: "Toggle All Stashed",
-            description: "Toggle all stashed windows.",
-            parameter: "toggle-stashed",
-          },
-          {
-            title: "Unstash All",
-            description: "Unstash all windows.",
-          },
-        ],
-      },
-      {
-        category: "Pin",
-        items: [
-          {
-            title: "Pin",
-            description: "Pin focused window.",
-          },
-          {
-            title: "Reflow Pin",
-            description: "Reflow pinned windows.",
-            parameter: "reflow-pin",
+            description: "Restore the focused window to its last position.",
+            icon: "window-positions/large_restore2Template.png",
           },
         ],
       },
